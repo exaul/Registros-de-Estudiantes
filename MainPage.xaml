@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegistrosdeEstudiante.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+            <Label
+                Text="Registro de Estudiantes"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Nombres:"
+                FontSize="18"
+                HorizontalOptions="Start" />
+            <Entry 
+                x:Name="NombreEntry"
+                HorizontalOptions="StartAndExpand"    
+                WidthRequest="270"
+                Text="{Binding Nombres}"
+                PlaceholderColor="Gray" Placeholder="Ingrese su nombre"/>
+            <Label
+                Text="Apellidos:"
+                FontSize="18"
+                HorizontalOptions="Start" />
+            <Entry
+                x:Name="ApellidoEntry"
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="270"
+                Text="{Binding Apellidos}"
+                PlaceholderColor="Gray" Placeholder="Ingrese su apellido"/>
+            <Label
+                Text="Materia:"
+                FontSize="18"
+                HorizontalOptions="Start" />
+            <Entry
+                x:Name="MateriaEntry"
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="270"
+                Text="{Binding Materia}"
+                PlaceholderColor="Gray" Placeholder="Ingrese la materia de su preferiencia"/>
+
+            <Button
+                x:Name="ConfirmarBtn"
+                Text="Confirmar"
+                Clicked="ConfirmarBtn_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
